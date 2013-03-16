@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.Workbench ActiveDocument="4-mixandmatch/MixAndMatchViewController.cs">
     <Files>
       <File FileName="4-mixandmatch/MixAndMatchViewController.cs" Line="54" Column="36" />
-      <File FileName="4-mixandmatch/BankElement.cs" Line="38" Column="32" />
-      <File FileName="4-mixandmatch/Bank.cs" Line="28" Column="77" />
-      <File FileName="4-mixandmatch/AppDelegate.cs" Line="18" Column="11" />
+      <File FileName="4-mixandmatch/BankElement.cs" Line="1" Column="1" />
+      <File FileName="4-mixandmatch/Bank.cs" Line="1" Column="1" />
+      <File FileName="4-mixandmatch/AppDelegate.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
