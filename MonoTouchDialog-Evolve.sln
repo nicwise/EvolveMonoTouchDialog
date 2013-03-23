@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-linq", "3-linq\3-linq.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-mixandmatch", "4-mixandmatch\4-mixandmatch.csproj", "{4FAFC94F-4405-4CB0-BDBA-2898FB1D845A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-styling", "5-styling\5-styling.csproj", "{BC32B005-130A-4655-A5B3-9A27C1500B4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -67,8 +69,20 @@ Global
 		{88549147-3517-4ECE-B2A6-21A88C2692E5}.Release|iPhone.Build.0 = Release|iPhone
 		{88549147-3517-4ECE-B2A6-21A88C2692E5}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{88549147-3517-4ECE-B2A6-21A88C2692E5}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Debug|iPhone.Build.0 = Debug|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Release|iPhone.ActiveCfg = Release|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Release|iPhone.Build.0 = Release|iPhone
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = 4-mixandmatch\4-mixandmatch.csproj
+		StartupItem = 5-styling\5-styling.csproj
 	EndGlobalSection
 EndGlobal

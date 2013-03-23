@@ -1,12 +1,48 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="4-mixandmatch/MixAndMatchViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="5-styling/Elements/ProjectElement.cs">
     <Files>
-      <File FileName="4-mixandmatch/MixAndMatchViewController.cs" Line="54" Column="36" />
+      <File FileName="4-mixandmatch/MixAndMatchViewController.cs" Line="1" Column="1" />
       <File FileName="4-mixandmatch/BankElement.cs" Line="1" Column="1" />
       <File FileName="4-mixandmatch/Bank.cs" Line="1" Column="1" />
       <File FileName="4-mixandmatch/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="5-styling/Data/DataSource.cs" Line="1" Column="1" />
+      <File FileName="5-styling/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="5-styling/Elements/IconElement.cs" Line="41" Column="41" />
+      <File FileName="5-styling/DialogViewContollers/KickstarterViewController.cs" Line="34" Column="31" />
+      <File FileName="5-styling/ExtensionMethods.cs" Line="1" Column="1" />
+      <File FileName="5-styling/Resources.cs" Line="19" Column="81" />
+      <File FileName="5-styling/Elements/ProjectElement.cs" Line="57" Column="56" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="5-styling" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Data" expanded="True" />
+            <Node name="DialogViewContollers" expanded="True" />
+            <Node name="Elements" expanded="True">
+              <Node name="ProjectElement.cs" selected="True" />
+            </Node>
+            <Node name="images" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>data</Value>
+          <Value>cmd</Value>
+          <Value>cmd</Value>
+          <Value>item.Type</Value>
+        </State>
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

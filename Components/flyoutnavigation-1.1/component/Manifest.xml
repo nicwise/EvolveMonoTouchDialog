@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="flyoutnavigation">
+  <name>Flyout Navigation</name>
+  <publisher>James Clancey</publisher>
+  <publisher-url>https://github.com/Clancey/FlyoutNavigation</publisher-url>
+  <version>1.1</version>
+  <summary>A sleek navigation view that swipes in from the side.</summary>
+  <samples>
+    <sample id="FlyoutNavigationSample">
+      <name>iOS Sample.</name>
+      <summary>iOS Sample</summary>
+    </sample>
+  </samples>
+</component>
