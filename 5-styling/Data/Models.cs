@@ -3,6 +3,12 @@ using System.Collections.Generic;
 
 namespace styling.Data
 {
+
+	public class ActivityAndProject 
+	{
+		public Project Project;
+		public Activity Activity;
+	}
 	public class Project
 	{
 		public Project()

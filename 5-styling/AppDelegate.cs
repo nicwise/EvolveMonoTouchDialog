@@ -48,7 +48,7 @@ namespace styling
 				// Supply view controllers corresponding to menu items:
 				ViewControllers = new [] {
 					new UINavigationController(new KickstarterViewController()),
-					new UIViewController { View = new UILabel { Text = "Vegetables (drag right)" } },
+					new UINavigationController(new ActivityViewController()),
 					new UIViewController { View = new UILabel { Text = "Minerals (drag right)" } },
 				},
 			};

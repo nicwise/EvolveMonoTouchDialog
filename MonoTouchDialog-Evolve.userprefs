@@ -1,18 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="5-styling/Elements/ProjectElement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Crania" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="5-styling/Elements/ActivityElement.cs">
     <Files>
       <File FileName="4-mixandmatch/MixAndMatchViewController.cs" Line="1" Column="1" />
       <File FileName="4-mixandmatch/BankElement.cs" Line="1" Column="1" />
       <File FileName="4-mixandmatch/Bank.cs" Line="1" Column="1" />
       <File FileName="4-mixandmatch/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="5-styling/Data/DataSource.cs" Line="1" Column="1" />
-      <File FileName="5-styling/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="5-styling/Elements/IconElement.cs" Line="41" Column="41" />
-      <File FileName="5-styling/DialogViewContollers/KickstarterViewController.cs" Line="34" Column="31" />
+      <File FileName="5-styling/Data/DataSource.cs" Line="26" Column="41" />
+      <File FileName="5-styling/AppDelegate.cs" Line="54" Column="6" />
+      <File FileName="5-styling/Elements/IconElement.cs" Line="62" Column="4" />
+      <File FileName="5-styling/DialogViewContollers/KickstarterViewController.cs" Line="37" Column="4" />
       <File FileName="5-styling/ExtensionMethods.cs" Line="1" Column="1" />
-      <File FileName="5-styling/Resources.cs" Line="19" Column="81" />
-      <File FileName="5-styling/Elements/ProjectElement.cs" Line="57" Column="56" />
+      <File FileName="5-styling/Resources.cs" Line="28" Column="58" />
+      <File FileName="5-styling/DialogViewContollers/ActivityViewController.cs" Line="79" Column="60" />
+      <File FileName="5-styling/Elements/ProjectSection.cs" Line="21" Column="54" />
+      <File FileName="5-styling/Elements/ActivityElement.cs" Line="85" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,9 +24,10 @@
             <Node name="Data" expanded="True" />
             <Node name="DialogViewContollers" expanded="True" />
             <Node name="Elements" expanded="True">
-              <Node name="ProjectElement.cs" selected="True" />
+              <Node name="ActivityElement.cs" selected="True" />
             </Node>
             <Node name="images" expanded="True" />
+            <Node name="MonoTouchDialog" expanded="True" />
           </Node>
         </State>
       </Pad>

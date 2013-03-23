@@ -55,8 +55,17 @@ namespace styling.Elements
 			public ProjectElementCell(NSString key) : base(UITableViewCellStyle.Default, key)
 			{
 				SelectionStyle = UITableViewCellSelectionStyle.None;
-				ElementBackground = new UIView();
+				ElementBackground = new UIView()
+				{
+					BackgroundColor = UIColor.White
+
+				};
+
 				ShadowBackground = new UIView();
+
+				//we have to use a layer in a layer to get both
+				// the shadow AND have all children clipped to the corner radius.
+
 
 				ShadowBackground.Layer.ShadowColor = UIColor.Black.CGColor;
 				ShadowBackground.Layer.ShadowOffset = new SizeF(0,0);
@@ -67,36 +76,42 @@ namespace styling.Elements
 
 				ElementBackground.Layer.CornerRadius = 4f;
 				ElementBackground.Layer.MasksToBounds = true;
-				ElementBackground.Layer.BorderColor = "979797".ToUIColor().CGColor;
+				ElementBackground.Layer.BorderColor = Colors.ProjectGrey.CGColor;
 				ElementBackground.Layer.BorderWidth = 1f;
-				ElementBackground.BackgroundColor = UIColor.White;
-
 
 
 				HeaderImage = new UIImageView();
 
-				TitleLabel = new UILabel();
-				TitleLabel.Font = UIFont.BoldSystemFontOfSize(14f);
-				TitleLabel.TextColor = UIColor.Black;
-				TitleLabel.TextAlignment = UITextAlignment.Center;
-				TitleLabel.Lines = 2;
+				TitleLabel = new UILabel() 
+				{
+					Font = Fonts.BoldPrimaryFont(14f),
+					TextColor = Colors.PrimaryTextColor,
+					TextAlignment = UITextAlignment.Center,
+					Lines = 2
+				};
 
 				ProgressView = new UIProgressView(UIProgressViewStyle.Bar);
 
-				PledgeLabel = new UILabel();
-				PledgeLabel.Lines = 2;
-				PledgeLabel.Font = UIFont.SystemFontOfSize(10f);
-				PledgeLabel.TextColor = UIColor.LightGray;
+				PledgeLabel = new UILabel() 
+				{
+					Lines = 2,
+					Font = Fonts.PrimaryFont(10f),
+					TextColor = Colors.SecondaryTextColor
+				};
 
-				BackersLabel = new UILabel();
-				BackersLabel.Lines = 2;
-				BackersLabel.Font = UIFont.SystemFontOfSize(10f);
-				BackersLabel.TextColor = UIColor.LightGray;
+				BackersLabel = new UILabel() 
+				{
+					Lines = 2,
+					Font = Fonts.PrimaryFont(10f),
+					TextColor = Colors.SecondaryTextColor
+				};
 
-				DaysToGoLabel = new UILabel();
-				DaysToGoLabel.Lines = 2;
-				DaysToGoLabel.Font = UIFont.SystemFontOfSize(10f);
-				DaysToGoLabel.TextColor = UIColor.LightGray;
+				DaysToGoLabel = new UILabel() 
+				{
+					Lines = 2,
+					Font = Fonts.PrimaryFont(10f),
+					TextColor = Colors.SecondaryTextColor
+				};
 
 				ElementBackground.AddSubviews(HeaderImage, TitleLabel, ProgressView, PledgeLabel, BackersLabel, DaysToGoLabel);
 
@@ -110,12 +125,15 @@ namespace styling.Elements
 				HeaderImage.Image = UIImage.FromBundle(source.Project.MainImage);
 				HeaderImage.ContentMode = UIViewContentMode.ScaleAspectFill;
 				TitleLabel.Text = source.Project.Title;
+
+
 				PledgeLabel.AttributedText = BoldFirstLine(string.Format("${0}", source.Project.PledgeAmount),
 				                                           string.Format("PLEDGED OF ${1}", source.Project.PledgeAmount, source.Project.Goal));
 				BackersLabel.AttributedText = BoldFirstLine(string.Format("{0}", source.Project.Backers),
 				                                            "BACKERS");
 				DaysToGoLabel.AttributedText = BoldFirstLine(string.Format("{0}", source.Project.DaysToGo),
 				                                             "DAYS TO GO");
+
 
 				ProgressView.SetProgress(source.Project.PercentProgress, false);
 				ContentView.BackgroundColor = UIColor.Clear;
@@ -126,8 +144,8 @@ namespace styling.Elements
 				var str = new NSMutableAttributedString(firstLine + "\n" + secondLine);
 
 				var att = new UIStringAttributes ();
-				att.Font = UIFont.BoldSystemFontOfSize(12f);
-				att.ForegroundColor = UIColor.Black;
+				att.Font = Fonts.BoldPrimaryFont(12f);
+				att.ForegroundColor = Colors.PrimaryTextColor;
 				
 				str.AddAttributes (att.Dictionary, new NSRange (0, firstLine.Length));
 
@@ -143,20 +161,24 @@ namespace styling.Elements
 
 				var frame = ElementBackground.Frame;
 
-				frame.Inflate(-1, -1);
-				HeaderImage.Frame = new RectangleF(new PointF(1,1), new SizeF(frame.Width, 200));
-				TitleLabel.Frame = new RectangleF(1,202,frame.Width, 40);
+
+
+				HeaderImage.Frame = new RectangleF(new PointF(0,0), new SizeF(frame.Width, 200));
+
+				TitleLabel.Frame = new RectangleF(0,202,frame.Width, 40);
 				ProgressView.Frame = new RectangleF(10, 243, frame.Width - 20, 21);
 
-				float x = 15;
-				float quarterWidth = (290 - 30) /4;
-				PledgeLabel.Frame = new RectangleF(x,260, quarterWidth*2,30);
+				float padding = 15;
+				float labelHeight = 30;
+				float x = padding;
+				float quarterWidth = (frame.Width - (padding * 2)) /4;
+				PledgeLabel.Frame = new RectangleF(x,260, quarterWidth*2,labelHeight);
 
 				x += quarterWidth * 2;
-				BackersLabel.Frame = new RectangleF(x, 260, quarterWidth, 30);
+				BackersLabel.Frame = new RectangleF(x, 260, quarterWidth, labelHeight);
 
 				x += quarterWidth;
-				DaysToGoLabel.Frame = new RectangleF(x, 260, quarterWidth, 30);
+				DaysToGoLabel.Frame = new RectangleF(x, 260, quarterWidth, labelHeight);
 
 			}
 		}

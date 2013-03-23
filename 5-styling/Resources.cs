@@ -22,7 +22,23 @@ namespace styling
 
 	public static class Colors
 	{
-		public static UIColor ProjectBackgroundGrey = "e5e8e3".ToUIColor();
+		public static UIColor ProjectGrey = "979797".ToUIColor();
+		public static UIColor TableBackgroundGrey = "e5e8e3".ToUIColor();
+		public static UIColor SecondaryTextColor = UIColor.LightGray;
+		public static UIColor PrimaryTextColor = UIColor.Black;
+	}
+
+	public static class Fonts 
+	{
+		public static UIFont PrimaryFont(float size)
+		{
+			return UIFont.SystemFontOfSize(size);
+		}
+
+		public static UIFont BoldPrimaryFont(float size)
+		{
+			return UIFont.BoldSystemFontOfSize(size);
+		}
 	}
 }
 

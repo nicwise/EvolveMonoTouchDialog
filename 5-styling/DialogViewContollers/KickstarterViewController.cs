@@ -30,7 +30,7 @@ namespace styling.DialogViewControllers
 
 			Root = root;
 
-			TableView.BackgroundColor = Colors.ProjectBackgroundGrey;
+			TableView.BackgroundColor = Colors.TableBackgroundGrey;
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			NavigationItem.TitleView = new UIImageView(Resources.KickstarterLogo);
 

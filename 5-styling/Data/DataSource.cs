@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace styling.Data
 {
@@ -19,6 +20,17 @@ namespace styling.Data
 				{
 					yield return project;
 				}
+			}
+		}
+
+		public IEnumerable<ActivityAndProject> Activity
+		{
+			get
+			{
+				return (from project in projects
+				        from activity in project.Activity
+				        orderby activity.Date
+				        select new ActivityAndProject { Activity = activity, Project = project} );
 			}
 		}
 
