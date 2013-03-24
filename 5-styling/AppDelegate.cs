@@ -57,6 +57,7 @@ namespace styling
 			navigation.NavigationRoot.TableView.BackgroundColor = UIColor.Black;
 			// Show the navigation view
 			//navigation.ToggleMenu ();
+			//navigation.SelectedIndex = 1;
 
 
 

@@ -14,88 +14,60 @@ namespace styling
 		{
 			Style = MonoTouch.UIKit.UITableViewStyle.Plain;
 
-			this.TableView.Source = new SpecialSource(this);
+			this.TableView.Source = new SpecialSource (this);
 		}
 		
 		public override void LoadView ()
 		{
 			base.LoadView ();
 			
-			var root = new RootElement("Activity");
+			var root = new RootElement ("Activity");
 			
+			var section = new Section ();
 
-			foreach(var ap in DataSource.Current.Activity)
+			foreach (var ap in DataSource.Current.Activity)
 			{
-
-				root.Add(new ProjectSection(ap.Project) {
-					new ActivityItemElement(ap.Activity, ap.Project)
-				});
-
-				root.Add(new ProjectSection(ap.Project) {
-					new ActivityItemElement(ap.Activity, ap.Project)
-				});
-
-				root.Add(new ProjectSection(ap.Project) {
-					new ActivityItemElement(ap.Activity, ap.Project)
-				});
-
-				//section.Add(new ActivityElement(activity));
+				section.Add (new ActivityItemElement (ap.Activity, ap.Project));
 			}
+
+			root.Add (section);
 
 			Root = root;
 			
 			TableView.BackgroundColor = Colors.TableBackgroundGrey;
-			//TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
-			NavigationItem.TitleView = new UIImageView(Resources.KickstarterLogo);
+			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
+			NavigationItem.TitleView = new UIImageView (Resources.KickstarterLogo);
 			
 		}
 
 		public override Source CreateSizingSource (bool unevenRows)
 		{
-			return new SpecialSource(this);
+			return new SpecialSource (this);
 		}
 
-		public void UpdateCellAtPath(NSIndexPath indexPath, PointF topOfTableView)
+		public void UpdateCellAtPath (NSIndexPath indexPath, PointF topOfTableView)
 		{
-			var section = Root.Sections [indexPath.Section];
-			var element = section.Elements [indexPath.Row];
 
-			var cell = TableView.CellAt(indexPath);
-			var topOfCell = TableView.RectForRowAtIndexPath(indexPath);
+			var cell = TableView.CellAt (indexPath);
+			var topOfCell = TableView.RectForRowAtIndexPath (indexPath);
+
 			if (cell is ActivityItemElement.ActivityElementCell)
 			{
-				(cell as ActivityItemElement.ActivityElementCell).UpdateSideImage(topOfTableView.Y - topOfCell.Y);
+				var topOffset = topOfTableView.Y;
+				if (topOffset < 0) topOffset = 0;
+				(cell as ActivityItemElement.ActivityElementCell).UpdateSideImage (topOffset - topOfCell.Y);
 			}
 
-
-			foreach(var path in TableView.IndexPathsForVisibleRows)
+			cell = TableView.CellAt (NSIndexPath.FromItemSection (indexPath.Item + 1, indexPath.Section));
+			if (cell != null)
 			{
-				if (path.Row != indexPath.Row && path.Section != indexPath.Section)
+				if (cell is ActivityItemElement.ActivityElementCell)
 				{
-					cell = TableView.CellAt(path);
-
-					if (cell is ActivityItemElement.ActivityElementCell)
-					{
-						(cell as ActivityItemElement.ActivityElementCell).UpdateSideImage(0);
-					}
+					(cell as ActivityItemElement.ActivityElementCell).UpdateSideImage (0);
 				}
 			}
 		}
 
-		public void UpdateVisibleCells()
-		{
-			foreach(var path in TableView.IndexPathsForVisibleRows)
-			{
-					var cell = TableView.CellAt(path);
-					//var topOfCell = TableView.RectForRowAtIndexPath(indexPath);
-
-					if (cell is ActivityItemElement.ActivityElementCell)
-					{
-						(cell as ActivityItemElement.ActivityElementCell).UpdateSideImage(0);
-					}
-
-			}
-		}
 
 		public class SpecialSource : SizingSource
 		{
@@ -105,23 +77,25 @@ namespace styling
 				Root = container.Root;
 			}
 
-
 			public override void Scrolled (UIScrollView scrollView)
 			{
+
 				var point = Container.TableView.ContentOffset;
-				var indexPath = Container.TableView.IndexPathForRowAtPoint(point);
+				var indexPath = Container.TableView.IndexPathForRowAtPoint (point);
 
 
 
 				if (indexPath != null)
-					(Container as ActivityViewController).UpdateCellAtPath(indexPath, point);
+				{
+					(Container as ActivityViewController).UpdateCellAtPath (indexPath, point);
+				} else {
+					//we are in the overscroll / bounce area, so we don't have a "cell at the point"
+					//so pick the first one!
+					(Container as ActivityViewController).UpdateCellAtPath (NSIndexPath.FromItemSection(0,0), point);
+				}
 
 			}
 
-			public override void ScrollAnimationEnded (UIScrollView scrollView)
-			{
-				(Container as ActivityViewController).UpdateVisibleCells();
-			}
 		}
 
 

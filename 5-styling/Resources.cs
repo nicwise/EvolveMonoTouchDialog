@@ -11,12 +11,14 @@ namespace styling
 		public static UIImage ProfileIcon = UIImage.FromBundle("images/icons/profile.png");
 
 		public static UIImage NavBarBackground = UIImage.FromBundle("images/navbar.png");
-		public static UIImage ProjectBackground = UIImage.FromBundle("images/projectbackground.png");
+		public static UIImage ProjectBackground = UIImage.FromBundle("images/projectbackground.png").CreateResizableImage(new UIEdgeInsets(20,20,20,20));
 
 		public static UIImage ProgressImageGrey = UIImage.FromBundle("images/progress-background.png").CreateResizableImage(new UIEdgeInsets(0,4,0,4));
 		public static UIImage ProgressImageGreen = UIImage.FromBundle("images/progress-foreground.png").CreateResizableImage(new UIEdgeInsets(0,4,0,4));
 
 		public static UIImage KickstarterLogo = UIImage.FromBundle("images/logo.png");
+
+		public static UIImage ActivityBackground = UIImage.FromBundle("images/activity-background.png").CreateResizableImage(new UIEdgeInsets(52,5,5,5));
 
 	}
 

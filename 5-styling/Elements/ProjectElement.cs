@@ -43,44 +43,25 @@ namespace styling.Elements
 		
 		class ProjectElementCell : UITableViewCell
 		{
-			public const float Height = 340;
+			public const float Height = 320;
 
 
 			UIImageView HeaderImage;
 			UILabel TitleLabel, PledgeLabel, BackersLabel, DaysToGoLabel;
 			UIProgressView ProgressView;
-			UIView ElementBackground, ShadowBackground;
+			UIImageView ElementBackground;
 
 
 			public ProjectElementCell(NSString key) : base(UITableViewCellStyle.Default, key)
 			{
 				SelectionStyle = UITableViewCellSelectionStyle.None;
-				ElementBackground = new UIView()
-				{
-					BackgroundColor = UIColor.White
+				ElementBackground = new UIImageView(Resources.ProjectBackground);
 
-				};
-
-				ShadowBackground = new UIView();
-
-				//we have to use a layer in a layer to get both
-				// the shadow AND have all children clipped to the corner radius.
-
-
-				ShadowBackground.Layer.ShadowColor = UIColor.Black.CGColor;
-				ShadowBackground.Layer.ShadowOffset = new SizeF(0,0);
-				ShadowBackground.Layer.ShadowRadius = 4f;
-				ShadowBackground.Layer.ShadowOpacity = 0.75f;
-				ShadowBackground.Layer.CornerRadius = 4f;
-
-
-				ElementBackground.Layer.CornerRadius = 4f;
-				ElementBackground.Layer.MasksToBounds = true;
-				ElementBackground.Layer.BorderColor = Colors.ProjectGrey.CGColor;
-				ElementBackground.Layer.BorderWidth = 1f;
 
 
 				HeaderImage = new UIImageView();
+				HeaderImage.Layer.CornerRadius = 4f;
+				HeaderImage.ClipsToBounds = true;
 
 				TitleLabel = new UILabel() 
 				{
@@ -115,8 +96,8 @@ namespace styling.Elements
 
 				ElementBackground.AddSubviews(HeaderImage, TitleLabel, ProgressView, PledgeLabel, BackersLabel, DaysToGoLabel);
 
-				ShadowBackground.AddSubview(ElementBackground);
-				ContentView.AddSubviews(ShadowBackground);
+
+				ContentView.AddSubviews(ElementBackground);
 
 			}
 			
@@ -156,21 +137,21 @@ namespace styling.Elements
 			{
 				base.LayoutSubviews ();
 
-				ShadowBackground.Frame = new RectangleF(15,15,290,Height - 30);
-				ElementBackground.Frame = new RectangleF(0,0,290,Height - 30);
+				ElementBackground.Frame = ContentView.Frame;
 
-				var frame = ElementBackground.Frame;
+				float Border = 16f;
+				var frame = new RectangleF(16,16, ContentView.Frame.Width - 32, ContentView.Frame.Height - 32);
 
 
 
-				HeaderImage.Frame = new RectangleF(new PointF(0,0), new SizeF(frame.Width, 200));
+				HeaderImage.Frame = new RectangleF(new PointF(Border,Border), new SizeF(frame.Width, 200));
 
-				TitleLabel.Frame = new RectangleF(0,202,frame.Width, 40);
-				ProgressView.Frame = new RectangleF(10, 243, frame.Width - 20, 21);
+				TitleLabel.Frame = new RectangleF(Border,202,frame.Width, 40);
+				ProgressView.Frame = new RectangleF(Border + 10, 243, frame.Width - 20, 21);
 
 				float padding = 15;
 				float labelHeight = 30;
-				float x = padding;
+				float x = Border + padding;
 				float quarterWidth = (frame.Width - (padding * 2)) /4;
 				PledgeLabel.Frame = new RectangleF(x,260, quarterWidth*2,labelHeight);
 

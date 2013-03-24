@@ -110,7 +110,7 @@ For people who want to add something to their order, we are streamlining the pro
 
 			projects.Add (new Project {
 				Id = Guid.NewGuid().ToString("D"),
-				Title = "The 10-year hoodie",
+				Title = "THE 10-YEAR HOODIE: Build for Life, Backed for a Decade",
 				OwnerName = "Jake Bronstein",
 				ShortDescription = "EVERY STITCH TELLS A STORY: A Premium Sweatshirt Designed for a Lifetime, Guaranteed for a Decade and Backed with FREE Mending!",
 				FullDescription = @"The 10-Year Hoodie Is...

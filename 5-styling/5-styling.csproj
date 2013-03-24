@@ -163,5 +163,7 @@
     <BundleResource Include="images\progress-background%402x.png" />
     <BundleResource Include="images\logo.png" />
     <BundleResource Include="images\logo%402x.png" />
+    <BundleResource Include="images\activity-background.png" />
+    <BundleResource Include="images\activity-background%402x.png" />
   </ItemGroup>
 </Project>
