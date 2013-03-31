@@ -2332,6 +2332,13 @@ namespace MonoTouch.Dialog
 			
 			return cell;
 		}
+
+		//XXXX
+		//HERE: CHANGE TO ALLOW CUSTOMIZED SECTION
+		public virtual UITableViewCell CustomizeCell(UITableViewCell source, NSIndexPath indexPath)
+		{
+			return source;
+		}
 	}
 	
 	/// <summary>

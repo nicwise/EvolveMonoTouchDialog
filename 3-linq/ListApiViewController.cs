@@ -6,11 +6,11 @@ using MonoTouch.UIKit;
 
 namespace linq
 {
-	public class LinqApiViewController : DialogViewController
+	public class ListApiViewController : DialogViewController
 	{
 		List<string> data = new List<string>();
 
-		public LinqApiViewController () : base(null, false)
+		public ListApiViewController () : base(null, false)
 		{
 
 			//out banks need to be sorted, so the button below can work. We just get the index into the LIST, 
@@ -42,9 +42,18 @@ namespace linq
 		{
 			base.LoadView ();
 
+			Root = BuildRootWithLinq();
 
+			//Root = BuildRootWithLoop();
+
+
+
+		}
+
+		public RootElement BuildRootWithLinq()
+		{
 			bankSelection = new RadioGroup (0);
-			Root = new RootElement ("Pick your bank", bankSelection) {
+			return new RootElement ("Pick your bank", bankSelection) {
 				from name in data
 				group name by name.Substring (0,1) into g
 				orderby g.Key
@@ -54,7 +63,34 @@ namespace linq
 						select (Element) new RadioElement(groupItem)
 				}
 			};
+		}
 
+		public RootElement BuildRootWithLoop()
+		{
+			bankSelection = new RadioGroup (0);
+
+			Section section = null;
+			string lastLetter = "";
+			RootElement root = new RootElement("Pick your bank", bankSelection);
+
+			foreach(var name in data)
+			{
+				string currentFirstLetter = name.Substring(0,1);
+				if (currentFirstLetter != lastLetter)
+				{
+					if (section != null && section.Count > 0) root.Add (section);
+
+					lastLetter = currentFirstLetter;
+					section = new Section(currentFirstLetter);
+				}
+
+				section.Add (new RadioElement(name));
+
+			}
+
+			if (section != null && section.Count > 0) root.Add (section);
+
+			return root;
 
 		}
 	}

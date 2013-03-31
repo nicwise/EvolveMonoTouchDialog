@@ -1,20 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Crania" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="5-styling/AppDelegate.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="5-styling/Resources.cs">
     <Files>
-      <File FileName="5-styling/AppDelegate.cs" Line="60" Column="6" />
+      <File FileName="5-styling/MonoTouchDialog/DialogViewController.cs" Line="337" Column="46" />
+      <File FileName="5-styling/MonoTouchDialog/Elements.cs" Line="2337" Column="45" />
+      <File FileName="5-styling/Elements/BackgroundImageSection.cs" Line="54" Column="47" />
+      <File FileName="5-styling/Resources.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="5-styling" expanded="True">
             <Node name="References" expanded="True" />
-            <Node name="Data" expanded="True" />
-            <Node name="DialogViewContollers" expanded="True" />
             <Node name="Elements" expanded="True" />
             <Node name="images" expanded="True" />
-            <Node name="MonoTouchDialog" expanded="True" />
-            <Node name="AppDelegate.cs" selected="True" />
+            <Node name="Resources.cs" selected="True" />
           </Node>
         </State>
       </Pad>

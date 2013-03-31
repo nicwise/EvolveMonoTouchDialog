@@ -5,11 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Reflection", "1-Reflectio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-Element", "2-Element\2-Element.csproj", "{88549147-3517-4ECE-B2A6-21A88C2692E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-linq", "3-linq\3-linq.csproj", "{58861CD8-E988-4039-892C-740FE064729C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-linq and element", "3-linq\3-linq and element.csproj", "{58861CD8-E988-4039-892C-740FE064729C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-mixandmatch", "4-mixandmatch\4-mixandmatch.csproj", "{4FAFC94F-4405-4CB0-BDBA-2898FB1D845A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-styling", "5-styling\5-styling.csproj", "{BC32B005-130A-4655-A5B3-9A27C1500B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0-uitableview", "0-uitableview\0-uitableview.csproj", "{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,18 @@ Global
 		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Release|iPhone.Build.0 = Release|iPhone
 		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{BC32B005-130A-4655-A5B3-9A27C1500B4B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Debug|iPhone.Build.0 = Debug|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Release|iPhone.ActiveCfg = Release|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Release|iPhone.Build.0 = Release|iPhone
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{DF033D42-61FD-4B45-AEF6-E66DD38DF43F}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = 5-styling\5-styling.csproj

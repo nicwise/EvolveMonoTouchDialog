@@ -49,7 +49,7 @@ namespace styling
 				ViewControllers = new [] {
 					new UINavigationController(new KickstarterViewController()),
 					new UINavigationController(new ActivityViewController()),
-					new UIViewController { View = new UILabel { Text = "Minerals (drag right)" } },
+					new UINavigationController(new ProfileViewController()),
 				},
 			};
 
@@ -57,7 +57,7 @@ namespace styling
 			navigation.NavigationRoot.TableView.BackgroundColor = UIColor.Black;
 			// Show the navigation view
 			//navigation.ToggleMenu ();
-			//navigation.SelectedIndex = 1;
+			navigation.SelectedIndex = 2;
 
 
 

@@ -19,6 +19,15 @@ namespace styling
 		public static UIImage KickstarterLogo = UIImage.FromBundle("images/logo.png");
 
 		public static UIImage ActivityBackground = UIImage.FromBundle("images/activity-background.png").CreateResizableImage(new UIEdgeInsets(52,5,5,5));
+		public static UIImage CellBackgroundTop = UIImage.FromBundle("images/cell_top.png");
+		public static UIImage CellBackgroundMiddle = UIImage.FromBundle("images/cell_middle.png");
+		public static UIImage CellBackgroundBottom = UIImage.FromBundle("images/cell_bottom.png");
+		public static UIImage CellBackgroundFull = UIImage.FromBundle("images/cell_full.png");
+		public static UIImage CellBackgroundTopActive = UIImage.FromBundle("images/cell_top_active.png");
+		public static UIImage CellBackgroundMiddleActive = UIImage.FromBundle("images/cell_middle_active.png");
+		public static UIImage CellBackgroundBottomActive = UIImage.FromBundle("images/cell_bottom_active.png");
+		public static UIImage CellBackgroundFullActive = UIImage.FromBundle("images/cell_full_active.png");
+		public static UIImage CellBackgroundFullActivePlain = UIImage.FromBundle("images/cell_full_active_plain.png");
 
 	}
 

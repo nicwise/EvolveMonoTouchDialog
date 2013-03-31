@@ -125,7 +125,9 @@
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="DialogViewContollers\ActivityViewController.cs" />
     <Compile Include="Elements\ActivityElement.cs" />
-    <Compile Include="Elements\ProjectSection.cs" />
+    <Compile Include="Elements\BackgroundImageSection.cs" />
+    <Compile Include="DialogViewContollers\ProfileViewController.cs" />
+    <Compile Include="Elements\ProfileImageView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -165,5 +167,24 @@
     <BundleResource Include="images\logo%402x.png" />
     <BundleResource Include="images\activity-background.png" />
     <BundleResource Include="images\activity-background%402x.png" />
+    <BundleResource Include="images\cell_bottom.png" />
+    <BundleResource Include="images\cell_bottom%402x.png" />
+    <BundleResource Include="images\cell_bottom_active.png" />
+    <BundleResource Include="images\cell_bottom_active%402x.png" />
+    <BundleResource Include="images\cell_full.png" />
+    <BundleResource Include="images\cell_full%402x.png" />
+    <BundleResource Include="images\cell_full_active.png" />
+    <BundleResource Include="images\cell_full_active%402x.png" />
+    <BundleResource Include="images\cell_full_active_plain.png" />
+    <BundleResource Include="images\cell_full_active_plain%402x.png" />
+    <BundleResource Include="images\cell_middle.png" />
+    <BundleResource Include="images\cell_middle%402x.png" />
+    <BundleResource Include="images\cell_middle_active.png" />
+    <BundleResource Include="images\cell_middle_active%402x.png" />
+    <BundleResource Include="images\cell_top.png" />
+    <BundleResource Include="images\cell_top%402x.png" />
+    <BundleResource Include="images\cell_top_active.png" />
+    <BundleResource Include="images\cell_top_active%402x.png" />
+    <BundleResource Include="images\covers\profilepic.png" />
   </ItemGroup>
 </Project>
