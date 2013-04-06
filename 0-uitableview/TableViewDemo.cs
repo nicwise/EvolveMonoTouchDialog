@@ -9,6 +9,8 @@ namespace uitableview
 	{
 		public TableViewDemo () : base(UITableViewStyle.Grouped)
 		{
+
+			#region Data
 			var data = new List<DataHolder>();
 
 	
@@ -47,13 +49,17 @@ namespace uitableview
 					"Red Shirt Guy"
 				}
 			});
+			#endregion
 
 			//setup the delegate and datasource, so the table view has something to talk to
 			// when it wants to do anything.
 			TableView.Delegate = new DemoDelegate(this);
 			TableView.DataSource = new DemoDataSource(this) { Data = data };
+
+			//TableView.Source <- Source is BOTH Delegate and DataSource!
 		}
 
+		#region Delegate
 		class DemoDelegate : UITableViewDelegate
 		{
 			TableViewDemo Container;
@@ -69,7 +75,9 @@ namespace uitableview
 				Container.TableView.DeselectRow(indexPath, true);
 			}
 		}
+		#endregion
 
+		#region DataSource
 		class DemoDataSource : UITableViewDataSource
 		{
 			TableViewDemo Container;
@@ -80,10 +88,22 @@ namespace uitableview
 
 			public List<DataHolder> Data;
 
+			//how many sections do we have?
+			public override int NumberOfSections (UITableView tableView)
+			{
+				return Data.Count;
+			}
+			
+			// how many rows in a given section?
+			public override int RowsInSection (UITableView tableView, int section)
+			{
+				return Data[section].Values.Count;
+			}
+
 			static NSString cellId = new NSString("TableViewDemoCell");
 
 			//gets a single cell
-			public override UITableViewCell GetCell (UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
+			public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 			{
 				var cell = tableView.DequeueReusableCell(cellId);
 
@@ -98,17 +118,6 @@ namespace uitableview
 				return cell;
 			}
 
-			//how many sections do we have?
-			public override int NumberOfSections (UITableView tableView)
-			{
-				return Data.Count;
-			}
-
-			// how many rows in a given section?
-			public override int RowsInSection (UITableView tableView, int section)
-			{
-				return Data[section].Values.Count;
-			}
 
 			//What should be displayed for the title of this section?
 			public override string TitleForHeader (UITableView tableView, int section)
@@ -123,6 +132,8 @@ namespace uitableview
 			}
 
 		}
+
+		#endregion
 
 		public class DataHolder
 		{

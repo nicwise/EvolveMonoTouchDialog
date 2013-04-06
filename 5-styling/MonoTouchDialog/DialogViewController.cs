@@ -333,7 +333,7 @@ namespace MonoTouch.Dialog
 				return Root.Sections [section].Footer;
 			}
 
-			//XXXX
+			//MTDCHANGE
 			//HERE: CHANGE TO ALLOW CUSTOMIZED SECTION
 			public override UITableViewCell GetCell (UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
 			{

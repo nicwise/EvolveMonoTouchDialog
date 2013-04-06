@@ -55,6 +55,7 @@ namespace styling
 
 			navigation.NavigationRoot.TableView.SeparatorStyle = UITableViewCellSeparatorStyle.DoubleLineEtched;
 			navigation.NavigationRoot.TableView.BackgroundColor = UIColor.Black;
+			navigation.NavigationRoot.TableView.ScrollEnabled = false;
 			// Show the navigation view
 			//navigation.ToggleMenu ();
 			navigation.SelectedIndex = 2;

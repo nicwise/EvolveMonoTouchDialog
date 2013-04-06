@@ -1,20 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="5-styling/Resources.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="0-uitableview/TableViewDemo.cs">
     <Files>
-      <File FileName="5-styling/MonoTouchDialog/DialogViewController.cs" Line="337" Column="46" />
-      <File FileName="5-styling/MonoTouchDialog/Elements.cs" Line="2337" Column="45" />
-      <File FileName="5-styling/Elements/BackgroundImageSection.cs" Line="54" Column="47" />
-      <File FileName="5-styling/Resources.cs" Line="1" Column="1" />
+      <File FileName="0-uitableview/TableViewDemo.cs" Line="62" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
+          <Node name="0-uitableview" expanded="True">
+            <Node name="TableViewDemo.cs" selected="True" />
+          </Node>
+          <Node name="2-Element" expanded="True" />
+          <Node name="4-mixandmatch" expanded="True" />
           <Node name="5-styling" expanded="True">
-            <Node name="References" expanded="True" />
+            <Node name="DialogViewContollers" expanded="True" />
             <Node name="Elements" expanded="True" />
             <Node name="images" expanded="True" />
-            <Node name="Resources.cs" selected="True" />
+            <Node name="MonoTouchDialog" expanded="True" />
           </Node>
         </State>
       </Pad>

@@ -1,6 +1,7 @@
 using System;
 using MonoTouch.Dialog;
 using MonoTouch.Foundation;
+using MonoTouch.UIKit;
 
 namespace mixandmatch
 {
@@ -17,8 +18,8 @@ namespace mixandmatch
 		{
 			currentBank = bank;
 
-			style = MonoTouch.UIKit.UITableViewCellStyle.Subtitle;
-			Accessory = MonoTouch.UIKit.UITableViewCellAccessory.DisclosureIndicator;
+			style = UITableViewCellStyle.Subtitle;
+			Accessory = UITableViewCellAccessory.DisclosureIndicator;
 		}
 
 		//We need to do this, otherwise, we'd get recycled cells which might have been used for other
@@ -36,7 +37,7 @@ namespace mixandmatch
 
 		// StyledStringElement is doing the hard lifting for us, but this gets called when we call ReloadData
 		// or when it's first loaded.
-		public override MonoTouch.UIKit.UITableViewCell GetCell (MonoTouch.UIKit.UITableView tv)
+		public override UITableViewCell GetCell (UITableView tv)
 		{
 			var cell = base.GetCell (tv);
 			cell.TextLabel.Text = currentBank.Name;
