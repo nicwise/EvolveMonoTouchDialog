@@ -58,7 +58,7 @@ namespace styling
 			navigation.NavigationRoot.TableView.ScrollEnabled = false;
 			// Show the navigation view
 			//navigation.ToggleMenu ();
-			navigation.SelectedIndex = 2;
+			//navigation.SelectedIndex = 2;
 
 
 

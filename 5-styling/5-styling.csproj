@@ -186,5 +186,7 @@
     <BundleResource Include="images\cell_top_active.png" />
     <BundleResource Include="images\cell_top_active%402x.png" />
     <BundleResource Include="images\covers\profilepic.png" />
+    <BundleResource Include="images\play-image.png" />
+    <BundleResource Include="images\play-image%402x.png" />
   </ItemGroup>
 </Project>

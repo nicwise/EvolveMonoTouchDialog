@@ -51,6 +51,8 @@ namespace styling.Elements
 			UIProgressView ProgressView;
 			UIImageView ElementBackground;
 
+			UIImageView PlayButtonImage;
+
 
 			public ProjectElementCell(NSString key) : base(UITableViewCellStyle.Default, key)
 			{
@@ -94,9 +96,11 @@ namespace styling.Elements
 					TextColor = Colors.SecondaryTextColor
 				};
 
-				ElementBackground.AddSubviews(HeaderImage, TitleLabel, ProgressView, PledgeLabel, BackersLabel, DaysToGoLabel);
+				PlayButtonImage = new UIImageView(Resources.PlayButton);
+				PlayButtonImage.ContentMode = UIViewContentMode.Center;
+				PlayButtonImage.Alpha = 1f;
 
-
+				ElementBackground.AddSubviews(HeaderImage, TitleLabel, ProgressView, PledgeLabel, BackersLabel, DaysToGoLabel, PlayButtonImage);
 				ContentView.AddSubviews(ElementBackground);
 
 			}
@@ -145,6 +149,7 @@ namespace styling.Elements
 
 
 				HeaderImage.Frame = new RectangleF(new PointF(Border,Border), new SizeF(frame.Width, 200));
+				PlayButtonImage.Frame = HeaderImage.Frame;
 
 				TitleLabel.Frame = new RectangleF(Border,202,frame.Width, 40);
 				ProgressView.Frame = new RectangleF(Border + 10, 243, frame.Width - 20, 21);

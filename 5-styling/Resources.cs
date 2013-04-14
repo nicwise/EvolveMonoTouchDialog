@@ -19,6 +19,7 @@ namespace styling
 		public static UIImage KickstarterLogo = UIImage.FromBundle("images/logo.png");
 		public static UIImage ActivityBackground = UIImage.FromBundle("images/activity-background.png").CreateResizableImage(new UIEdgeInsets(52,5,5,5));
 
+		public static UIImage PlayButton = UIImage.FromBundle("images/play-image.png");
 
 		public static UIImage CellBackgroundTop = UIImage.FromBundle("images/cell_top.png").CreateResizableImage(new UIEdgeInsets(5,5,2,5));
 		public static UIImage CellBackgroundMiddle = UIImage.FromBundle("images/cell_middle.png").CreateResizableImage(new UIEdgeInsets(2,5,2,5));
