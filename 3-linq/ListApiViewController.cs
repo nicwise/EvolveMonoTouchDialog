@@ -12,6 +12,8 @@ namespace linq
 
 		public ListApiViewController () : base(null, false)
 		{
+			//plain makes a bit more sense for a list of data
+			Style = UITableViewStyle.Plain;
 
 			//out banks need to be sorted, so the button below can work. We just get the index into the LIST, 
 			// not into the List<string>. But we can make them the same!

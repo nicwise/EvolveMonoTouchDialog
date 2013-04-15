@@ -1,33 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="5-styling/AppDelegate.cs">
-    <Files>
-      <File FileName="5-styling/DialogViewContollers/KickstarterViewController.cs" Line="1" Column="1" />
-      <File FileName="5-styling/Elements/ActivityElement.cs" Line="1" Column="1" />
-      <File FileName="5-styling/DialogViewContollers/ActivityViewController.cs" Line="1" Column="1" />
-      <File FileName="5-styling/DialogViewContollers/ProfileViewController.cs" Line="25" Column="9" />
-      <File FileName="5-styling/Elements/BackgroundImageSection.cs" Line="1" Column="1" />
-      <File FileName="5-styling/MonoTouchDialog/Elements.cs" Line="1" Column="1" />
-      <File FileName="5-styling/MonoTouchDialog/DialogViewController.cs" Line="1" Column="1" />
-      <File FileName="5-styling/Elements/ProjectElement.cs" Line="101" Column="31" />
-      <File FileName="4-mixandmatch/AppDelegate.cs" Line="12" Column="2" />
-      <File FileName="5-styling/AppDelegate.cs" Line="57" Column="72" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="0-uitableview" expanded="True" />
-          <Node name="2-Element" expanded="True" />
-          <Node name="3-linq and element" expanded="True" />
-          <Node name="4-mixandmatch" expanded="True" />
           <Node name="5-styling" expanded="True">
-            <Node name="DialogViewContollers" expanded="True" />
-            <Node name="Elements" expanded="True" />
-            <Node name="images" expanded="True">
-              <Node name="covers" expanded="True" />
-            </Node>
-            <Node name="MonoTouchDialog" expanded="True" />
-            <Node name="AppDelegate.cs" selected="True" />
+            <Node name="Main.cs" selected="True" />
           </Node>
         </State>
       </Pad>
